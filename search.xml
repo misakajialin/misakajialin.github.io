@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/06/23/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>折腾一下解析域名</title>
+    <url>/2023/06/23/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天折腾完Hexo和Ayer主题，把网站托管到GitHub之后就开始忙活着搞域名了。</p>
+<p>之前也不是没搞过，可能是由于白嫖的原因，问题不断，屡屡失败，就是没解析上。而今天秉着花钱买服务的想法，遂花2.22美金，买下了这个域名<code>misakait.online</code>的一年使用期。最后它也没辜负我的期望，成功解析上了。</p>
+<h1 id="正式教程"><a href="#正式教程" class="headerlink" title="正式教程"></a>正式教程</h1><span id="more"></span>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>我是在<a href="%5Bwww.name.com%5D(http://www.name.com)">Name</a>这里买的域名，购买过程就不啰嗦了，就是注意买的时候会有个人信息要填，国家要选China,币种人民币即可。要不没有支付宝选项。</p>
+<h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p><img src="https://pic.imgdb.cn/item/64958a961ddac507ccfa7a1f.webp"></p>
+<p>这样子填就可以了，其中主机类型A的填@，answer这样填：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>至于CNAME类型的主机填www，answer填你原本GitHub Page的域名即可。</p>
+<p>至此域名提供商的事就结束了。</p>
+<h2 id="Github-Page设置"><a href="#Github-Page设置" class="headerlink" title="Github Page设置"></a>Github Page设置</h2><p>进入你Hexo托管的仓库，点击Setting</p>
+<p><img src="https://pic.imgdb.cn/item/64958ce31ddac507ccfeec62.webp"></p>
+<p>接着找到page</p>
+<p><img src="https://pic.imgdb.cn/item/64958d571ddac507ccffbfa6.jpg"></p>
+<p>找到Custom domain，并在红框内填上你在域名提供商中买到的域名。</p>
+<p><img src="https://pic.imgdb.cn/item/64958d791ddac507cc00018a.webp"></p>
+<p>类似如此，最后点击save。即可大功告成！</p>
+<p>最后等待大约30分钟左右就可以通过新域名访问你的博客了。（最长可以等到48小时之后才可以）</p>
 ]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>domain</tag>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>记树莓派上Hexo的搭建</title>
@@ -106,8 +119,8 @@
         <category>technology</category>
       </categories>
       <tags>
-        <tag>RaspberryPi</tag>
         <tag>hexo</tag>
+        <tag>RaspberryPi</tag>
       </tags>
   </entry>
 </search>
