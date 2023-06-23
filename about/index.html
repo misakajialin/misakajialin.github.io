@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>记树莓派上Hexo的搭建 |  Misakait&#39;s Blog</title>
+      <title>关于缘扬风星 |  Misakait&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,8 +54,8 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-记树莓派上Hexo的搭建"
-  class="article article-type-post"
+  id="page-"
+  class="article article-type-page"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
@@ -65,130 +65,21 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  记树莓派上Hexo的搭建
+  关于缘扬风星
 </h1>
  
 
       
     </header>
-     
-    <div class="article-meta">
-      <a href="/2023/06/23/%E8%AE%B0%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8AHexo%E7%9A%84%E6%90%AD%E5%BB%BA/" class="article-date">
-  <time datetime="2023-06-23T05:53:13.000Z" itemprop="datePublished">2023-06-23</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/technology/">technology</a>
-  </div>
-  
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.1k</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-    <div class="tocbot"></div>
-
-
-
-
-  
+       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>   首先感谢你能来访问我的 Blog，这是我搭建的第一个博客网站，使用的是 Github Pages + Hexo 的形式搭建。从小白一路走了过来也挺不容易的 hhh，我奋战一天一夜，从一开始的Aurora失败最后转投Hexo，可谓经历良多。现在把它记录下来，将来也许会是一种怀念。</p>
-<span id="more"></span>
-
-<!-- more -->
-
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="安装nodejs及npm"><a href="#安装nodejs及npm" class="headerlink" title="安装nodejs及npm"></a>安装nodejs及npm</h2><h3 id="1-寻找nodejs链接"><a href="#1-寻找nodejs链接" class="headerlink" title="1. 寻找nodejs链接"></a>1. 寻找nodejs链接</h3><p>进入<a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js官网</a></p>
-<p><img src="https://pic.imgdb.cn/item/649538dd1ddac507cc615530.webp"></p>
-<p>点击<code>OtherDownloads</code>进入<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">下载页面</a>我们可以看到在<code>Linux Binaries (ARM)</code>下有着armv8即aarch64的包。</p>
-<p><img src="https://pic.imgdb.cn/item/649539d81ddac507cc635f23.webp"></p>
-<p>树莓派上wget下载即可。</p>
-<h3 id="2-解压二进制包"><a href="#2-解压二进制包" class="headerlink" title="2.解压二进制包"></a>2.解压二进制包</h3><p>在树莓派终端输入如下命令解压：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xz -d ~.tar.xz</span><br><span class="line">tar -xavf ~.tar</span><br></pre></td></tr></table></figure>
-
-<p>先将系统内原本存在的<code>/usr/bin.node</code>删除，在终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /usr/bin/node</span><br><span class="line"><span class="comment">#如果不存在，忽略此步骤</span></span><br></pre></td></tr></table></figure>
-
-<p>解压后，将二进制包移动到<code>/usr/local/node</code>下，在终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> ./~ /usr/local/node</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-建立软连接"><a href="#4-建立软连接" class="headerlink" title="4.建立软连接"></a>4.建立软连接</h3><p>然后为<code>node</code>和<code>npm</code>建立软连接，在终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">ln</span> -s /usr/local/node/bin/node /usr/bin/node</span><br><span class="line">sudo <span class="built_in">ln</span> -s /usr/local/node/bin/npm /usr/bin/npm</span><br><span class="line"><span class="comment">#这类似于Windows中的快捷方式</span></span><br></pre></td></tr></table></figure>
-
-<p>我们通过查看<code>node</code>和<code>npm</code>版本的方式来查看是否成功，在终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v &amp;&amp; npm -v</span><br></pre></td></tr></table></figure>
-
-<p>可以看到对应的版本号说明<strong>安装成功</strong>，如下图（不同支持版或版本号不同）：</p>
-<p><img src="https://pic.imgdb.cn/item/64953b1f1ddac507cc65fb4d.webp"></p>
-<h2 id="GitHub创建个人仓库"><a href="#GitHub创建个人仓库" class="headerlink" title="GitHub创建个人仓库"></a>GitHub创建个人仓库</h2><p>登录到GitHub,如果没有GitHub帐号，使用你的邮箱注册GitHub帐号：<a target="_blank" rel="noopener" href="https://github.com/">Build software better, together</a> 点击GitHub中的New repository创建新仓库，仓库名应该为：<strong>用户名</strong>.github.io这个<strong>用户名</strong>使用你的GitHub帐号名称代替，这是固定写法，比如我的仓库名为：<img src="https://pic.imgdb.cn/item/64953c2b1ddac507cc68229e.webp"></p>
-<h2 id="获取GitHub的taken"><a href="#获取GitHub的taken" class="headerlink" title="获取GitHub的taken"></a>获取GitHub的taken</h2><p><strong>这一部尤为关键！后面要用。</strong></p>
-<h3 id="1-登录github，点击设置"><a href="#1-登录github，点击设置" class="headerlink" title="1.登录github，点击设置"></a>1.登录github，点击设置</h3><p><img src="https://pic3.zhimg.com/80/v2-257b6563b9a331de7ba82fd959ac3096_720w.webp"></p>
-<h3 id="2-在左侧菜单点击开发者设置"><a href="#2-在左侧菜单点击开发者设置" class="headerlink" title="2.在左侧菜单点击开发者设置"></a>2.在左侧菜单点击开发者设置</h3><p><img src="https://pic1.zhimg.com/80/v2-1d93cc0bd336d0c8fbe46e741be7d358_720w.webp"></p>
-<h3 id="3-生成新的令牌"><a href="#3-生成新的令牌" class="headerlink" title="3.生成新的令牌"></a>3.生成新的令牌</h3><p><img src="https://pic.imgdb.cn/item/649547931ddac507cc7ee595.webp"></p>
-<h3 id="4-点击创建完成创建"><a href="#4-点击创建完成创建" class="headerlink" title="4.点击创建完成创建"></a>4.点击创建完成创建</h3><p>切记，<strong>务必复制一下这个token，并且保存在某个文件里，否则之后只能编辑权限，找不到token值了，只能重新创建</strong>。同时注意保护这个taken，这个taken的权利极其大！小心不要让它泄露了。</p>
-<h2 id="部署Git"><a href="#部署Git" class="headerlink" title="部署Git"></a>部署Git</h2><p>在树莓派终端输入以安装Git：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
-
-<p>配置Git信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的GitHub用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>然后查看是否已经全局修改用户名：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-
-<p>配置完成后如下图：</p>
-<p><img src="https://pic.imgdb.cn/item/64953fa81ddac507cc6f5567.webp"></p>
-<h2 id="Hexo的安装"><a href="#Hexo的安装" class="headerlink" title="Hexo的安装"></a>Hexo的安装</h2><p>新建一个文件夹并在此安装Hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>查看是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://pic.imgdb.cn/item/64953e111ddac507cc6c2861.webp"></p>
-<h1 id="正式起航"><a href="#正式起航" class="headerlink" title="正式起航"></a>正式起航</h1><h2 id="Hexo-初始化配置"><a href="#Hexo-初始化配置" class="headerlink" title="Hexo 初始化配置"></a>Hexo 初始化配置</h2><p>第一个命令，为<code>hexo</code>建立软连接</p>
-<p>第二个命令，初始化Hexo</p>
-<p>第三个命令表示安装 hexo 部署到 git page 的 deployer，否则后面执行<code>hexo d</code>‘时会出错。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">ln</span> -s /home/lib/node_modules/hexo-cli/bin/hexo /usr/bin/hexo</span><br><span class="line">sudo hexo init</span><br><span class="line">sudo npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h3><p>执行以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo g</span><br><span class="line">sudo hexo s</span><br></pre></td></tr></table></figure>
-
-<p>执行完即可浏览器进入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 查看效果</p>
-<p>显示如下说明操作成功：  </p>
-<p><img src="https://pic.imgdb.cn/item/649541571ddac507cc72b406.png"></p>
-<p>确认完后回到ssh按Ctrl+C退出。</p>
-<h2 id="将博客部署到Github-Pages-上"><a href="#将博客部署到Github-Pages-上" class="headerlink" title="将博客部署到Github Pages 上"></a>将博客部署到Github Pages 上</h2><p>  到目前为止，我们的本地博客就成功搭建了，但是现在我们只能通过本地连接查看博客，我们要做的是让其他人也能够访问我们的博客，这就需要我们将博客部署到 Github Pages 上。</p>
-<p>我们需要配置博客根目录下的<code>_config.yml</code>文件，在终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim _config.yml</span><br></pre></td></tr></table></figure>
-
-<p>进入<code>_config.yml</code>后到文件末端，如下图 将此处修改为</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/你的账户名/你的账户名.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  #注意这里的冒号后要加空格</span><br></pre></td></tr></table></figure>
-
-<p>类似这样：</p>
-<p><img src="https://pic.imgdb.cn/item/649542bb1ddac507cc75ab3b.webp"></p>
-<p>在 blog 文件夹下分别执行以下命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo clean &amp;&amp; sudo hexo g &amp;&amp; sudo hexo d</span><br></pre></td></tr></table></figure>
-
-<p>期间要输入用户名和密码（taken）,用户名输入你的GitHub用户名即可，但是密码不是你的GitHub密码，而是taken！至于taken，一步步按上文走的你应该有了。</p>
-<p><img src="https://pic.imgdb.cn/item/649544241ddac507cc78855b.webp"></p>
-<p>至此，你的博客已经上传至GitHub了！</p>
-<h2 id="访问博客"><a href="#访问博客" class="headerlink" title="访问博客"></a>访问博客</h2><p>你的博客地址：https:&#x2F;&#x2F;你的用户名.github.io， 比如我的是：<a target="_blank" rel="noopener" href="https://misakajialin.github.io/">https://misakajialin.github.io</a> ，现在每个人都可以通过此链接访问你的博客了!（感动）</p>
-<h1 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h1><p>至于接下来内容，就期待我的第二篇博客吧！</p>
+  <p>林伟华高三生，本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、python、Objective-C、ActionScript、Pascal、spss、sas等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP等系统的开关机！！！！！！！</p>
+<p>现在开发有《市场风云》，《泷奈随机数生成器》</p>
+<p>Github:<a target="_blank" rel="noopener" href="https://github.com/misakajialin">misakajialin (github.com)</a></p>
+<p>Mail: <a href="mailto:&#x32;&#x35;&#x39;&#x37;&#53;&#56;&#x38;&#x31;&#52;&#x34;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;">&#x32;&#x35;&#x39;&#x37;&#53;&#56;&#x38;&#x31;&#52;&#x34;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;</a></p>
+<p>WeChat: cjl2597588144</p>
+<p><img src="https://pic.imgdb.cn/item/6495a1361ddac507cc24a48b.jpg"></p>
  
       <!-- reward -->
       
@@ -253,31 +144,15 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/06/23/%E8%AE%B0%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8AHexo%E7%9A%84%E6%90%AD%E5%BB%BA/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/about/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RaspberryPi/" rel="tag">RaspberryPi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
     </footer>
   </div>
 
    
-  <nav class="article-nav">
-    
-      <a href="/2023/06/23/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            折腾一下解析域名
-          
-        </div>
-      </a>
-    
-    
-  </nav>
-
    
 <!-- valine评论 -->
 <div id="vcomments-box">
@@ -327,8 +202,7 @@
 </style>
 
  
-   
-     
+    
 </article>
 
 </section>
@@ -487,22 +361,6 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link

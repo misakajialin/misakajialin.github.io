@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-23T12:51:59.000Z</updated>
+  <updated>2023-06-23T13:45:35.328Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ayer主题的安装</title>
+    <link href="http://example.com/2023/06/23/Ayer%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+    <id>http://example.com/2023/06/23/Ayer%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/</id>
+    <published>2023-06-23T13:45:35.000Z</published>
+    <updated>2023-06-23T13:45:35.328Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>折腾一下解析域名</title>
