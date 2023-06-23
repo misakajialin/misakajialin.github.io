@@ -14,7 +14,7 @@
 
 <p>至于CNAME类型的主机填www，answer填你原本GitHub Page的域名即可。</p>
 <p>至此域名提供商的事就结束了。</p>
-<h2 id="Github-Page设置"><a href="#Github-Page设置" class="headerlink" title="Github Page设置"></a>Github Page设置</h2><p>进入你Hexo托管的仓库，点击Setting</p>
+<h2 id="Github-Page设置"><a href="#Github-Page设置" class="headerlink" title="Github-Page设置"></a>Github-Page设置</h2><p>进入你Hexo托管的仓库，点击Setting</p>
 <p><img src="https://pic.imgdb.cn/item/64958ce31ddac507ccfeec62.webp"></p>
 <p>接着找到page</p>
 <p><img src="https://pic.imgdb.cn/item/64958d571ddac507ccffbfa6.jpg"></p>
@@ -22,6 +22,19 @@
 <p><img src="https://pic.imgdb.cn/item/64958d791ddac507cc00018a.webp"></p>
 <p>类似如此，最后点击save。即可大功告成！</p>
 <p>最后等待大约30分钟左右就可以通过新域名访问你的博客了。（最长可以等到48小时之后才可以）</p>
+<h2 id="紧急问题修复"><a href="#紧急问题修复" class="headerlink" title="紧急问题修复"></a>紧急问题修复</h2><p>我兴冲冲<code>hexo d -g</code>之后进入我的新域名浏览时，却发现了十分恐怖的现象</p>
+<p>404！！！</p>
+<p>最后发现原来还要在你的博客目录下的source文件夹下新建一个CNAME文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd source</span><br><span class="line">touch CNAME</span><br><span class="line">vim CNAME</span><br></pre></td></tr></table></figure>
+
+<p>里面只要写上你的新域名就行了。</p>
+<p><img src="https://pic.imgdb.cn/item/649593a31ddac507cc0ab2ab.webp"></p>
+<p>类似这样。</p>
+<p>接着重复<strong>Github-Page设置</strong>中的内容。</p>
+<p>最后重新hexo重新生成并上传</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp;  hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>即可。</p>
 ]]></content>
       <categories>
         <category>technology</category>
