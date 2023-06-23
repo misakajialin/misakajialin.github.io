@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-23T05:53:13.651Z</updated>
+  <updated>2023-06-23T07:26:12.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,11 +21,25 @@
     <link href="http://example.com/2023/06/23/%E8%AE%B0%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8AHexo%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
     <id>http://example.com/2023/06/23/%E8%AE%B0%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8AHexo%E7%9A%84%E6%90%AD%E5%BB%BA/</id>
     <published>2023-06-23T05:53:13.000Z</published>
-    <updated>2023-06-23T05:53:13.651Z</updated>
+    <updated>2023-06-23T07:26:12.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;   首先感谢你能来访问我的 Blog，这是我搭建的第一个博客网站，使用的是 Github Pages + Hexo</summary>
+        
+      
     
     
     
+    <category term="technology" scheme="http://example.com/categories/technology/"/>
     
+    
+    <category term="RaspberryPi" scheme="http://example.com/tags/RaspberryPi/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
   </entry>
   
