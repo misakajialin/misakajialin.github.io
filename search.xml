@@ -1,18 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Ayer主题的安装</title>
-    <url>/20230623/Ayer%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[]]></content>
+    <title>Hexo的美化和优化--Ayer主题的安装与SEO优化</title>
+    <url>/20230623/Hexo%E7%9A%84%E7%BE%8E%E5%8C%96%E5%92%8C%E4%BC%98%E5%8C%96--Ayer%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8ESEO%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>正想要写这篇博客时。打开朋友圈一看，又是狗粮又是现充在这端午三天横行。反观自己，这三天就全坐在电脑旁折腾树莓派和博客了。不说了题外话了，回归正题。本篇博文力图包含Ayer主题的安装，live2d看板娘的安装，SEO的优化。</p>
+<span id="more"></span>
+
+<h1 id="部署Ayer主题"><a href="#部署Ayer主题" class="headerlink" title="部署Ayer主题"></a>部署Ayer主题</h1><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><p><strong>方法一( 推荐）：</strong></p>
+<p>在你的博客（Hexo）目录下执行以下命令：</p>
+<p>如若没有安装cnpm则以下所有cnpm命令全部改为npm即可，或者参考我的这篇博文<a href="https://misakait.online/20230623/%E8%AE%B0%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8AHexo%E7%9A%84%E6%90%AD%E5%BB%BA/">记树莓派上Hexo的搭建 | Misakait’s Blog</a> 来安装cnpm。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm i hexo-theme-ayer -S</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果是新安装本主题，安装完成后会在根目录生成一个<code>_config.ayer.yml</code>文件，如若没有新建一个<code>_config.ayer.yml文件。直接编辑</code>_conig.ayer.yml&#96;文件进行配置即可。</li>
+</ul>
+<p><strong>方法二（hexo &lt; 5.0）：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 国内用户如果速度较慢，可以把github地址替换为：https://gitee.com/mirrors/ayer.git</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h2><p>将博客根目录下的 <code>_config.yml</code> 里的 <code>theme</code> 值修改成 <code>ayer</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: ayer</span><br></pre></td></tr></table></figure>
+
+<p>进入_config.ayer.yml文件配置，如果你一开始没有改文件，而是自己新建的，将下文复制过去。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 侧边栏菜单</span><br><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  归档: /archives</span><br><span class="line">  分类: /categories</span><br><span class="line">  标签: /tags</span><br><span class="line">  关于我: /about</span><br><span class="line"></span><br><span class="line"># 站点次标题和打字动效</span><br><span class="line"># https://github.com/mattboldt/typed.js</span><br><span class="line">subtitle:</span><br><span class="line">  enable: true # 是否开启动效</span><br><span class="line">  text: 唯我超电磁炮永存 # 显示的文字</span><br><span class="line">  text2: 樱花落下的速度是没秒五厘米 # 滚动播放，如果不需要可以留空</span><br><span class="line">  text3: 在此宣誓对你的爱 # 最多支持三段文字</span><br><span class="line">  startDelay: 0 # 延迟时间</span><br><span class="line">  typeSpeed: 200 # 打字速度</span><br><span class="line">  loop: true # 是否循环</span><br><span class="line">  backSpeed: 100 # 回退速度</span><br><span class="line">  showCursor: true # 是否显示光标</span><br><span class="line"></span><br><span class="line"># 网站图标和侧边栏logo</span><br><span class="line">favicon: /favicon.ico</span><br><span class="line">logo: /images/ayer-side.svg</span><br><span class="line"></span><br><span class="line"># 封面配置</span><br><span class="line"># enable-是否启用封面；path-封面背景图；logo-封面logo</span><br><span class="line">cover:</span><br><span class="line">  enable: true</span><br><span class="line">  path: /images/cover1.jpg # /source/images目录下附送多张精美壁纸，可任意更换</span><br><span class="line">  logo: /images/ayer.svg # 如果不要直接设置成false</span><br><span class="line"></span><br><span class="line"># 页面顶部进度条</span><br><span class="line">progressBar: true</span><br><span class="line"></span><br><span class="line"># 告示板模块</span><br><span class="line">broadcast:</span><br><span class="line">  enable: true # true开启，false关闭</span><br><span class="line">  type: 2 # 1：自定义输入，2：一言api(https://hitokoto.cn/)</span><br><span class="line">  text: 一个安静优雅的hexo主题，快速且响应式。 # type为1时有效</span><br><span class="line"></span><br><span class="line"># 文章配置</span><br><span class="line"># 文章太长，截断按钮文字(在需要截断的行增加此标记：&lt;!--more--&gt;)</span><br><span class="line">excerpt_link: 阅读更多...</span><br><span class="line"># 如果你嫌每篇文章手动加more标记比较麻烦，又不想在首页全文显示，可以把excerpt_all设置成true，这样首页只会显示文章归档</span><br><span class="line">excerpt_all: false</span><br><span class="line"></span><br><span class="line"># 是否开启代码复制按钮</span><br><span class="line">copy_btn: true</span><br><span class="line"># 是否开启文章分享按钮</span><br><span class="line">share_enable: true</span><br><span class="line"># 国内的社交平台(If you are not in China, maybe you prefer to set:false)</span><br><span class="line">share_china: true</span><br><span class="line"># 文章分享文字</span><br><span class="line">share_text: 分享</span><br><span class="line"></span><br><span class="line"># 分页文字</span><br><span class="line">nav_text:</span><br><span class="line">  page_prev: 上一页</span><br><span class="line">  page_next: 下一页</span><br><span class="line">  post_prev: 上一篇</span><br><span class="line">  post_next: 下一篇</span><br><span class="line"></span><br><span class="line"># 文章页是否显示目录</span><br><span class="line">toc: true</span><br><span class="line"></span><br><span class="line"># 文章中的图片是否支持点击放大</span><br><span class="line">image_viewer: true</span><br><span class="line"></span><br><span class="line"># https://github.com/willin/hexo-wordcount</span><br><span class="line"># 是否开启字数统计(关闭请设置enable为false)</span><br><span class="line"># 也可以单独在md文件里Front-matter设置`no_word_count: true`属性，来自定义关闭字数统计</span><br><span class="line">word_count:</span><br><span class="line">  enable: true</span><br><span class="line">  # 只在文章详情显示(不在首页显示)</span><br><span class="line">  only_article_visit: true</span><br><span class="line"></span><br><span class="line"># 打赏</span><br><span class="line"># 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-默认开启所有文章均有打赏，如果有些文章你不需要，请在文章对应的md文件里设置no_reward:true</span><br><span class="line">reward_type: 0</span><br><span class="line"># 打赏wording</span><br><span class="line">#reward_wording: &quot;请我喝杯咖啡吧~&quot;</span><br><span class="line"># 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg</span><br><span class="line">#alipay: /images/alipay.jpg</span><br><span class="line"># 微信二维码图片地址</span><br><span class="line">#weixin: /images/wechat.jpg</span><br><span class="line"></span><br><span class="line"># 版权声明</span><br><span class="line"># 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明</span><br><span class="line">copyright_type: 2</span><br><span class="line"></span><br><span class="line"># 是否启用搜索</span><br><span class="line">search: true</span><br><span class="line"></span><br><span class="line"># RSS订阅(先安装hexo-generator-feed插件，再去博客根目录config进行配置)</span><br><span class="line"># 不想显示可以直接留空</span><br><span class="line">rss: /atom.xml</span><br><span class="line"></span><br><span class="line"># 是否启用黑夜模式开关</span><br><span class="line">darkmode: true</span><br><span class="line"></span><br><span class="line"># 动态背景效果: 0-关闭，1-动态线条(跟随鼠标)</span><br><span class="line">canvas_bg: 1</span><br><span class="line"></span><br><span class="line"># 自定义鼠标样式，直接替换/images/mouse.cur文件</span><br><span class="line">mouse:</span><br><span class="line">  enable: false</span><br><span class="line">  path: /images/mouse.cur</span><br><span class="line"></span><br><span class="line"># 鼠标点击效果：0-关闭，1-爱心，2-爆炸烟花，3-粒子烟花</span><br><span class="line">click_effect: 1</span><br><span class="line"></span><br><span class="line"># 页面宽度自定义（不建议修改，可能造成布局混乱），article_width文章宽度，sidebar_width侧边栏宽度</span><br><span class="line">layout:</span><br><span class="line">  article_width: 80rem</span><br><span class="line">  sidebar_width: 8rem</span><br><span class="line"></span><br><span class="line"># GitHub Ribbons-封面右上角的forkme，换样式直接在source/images目录下替换forkme图片</span><br><span class="line">github:</span><br><span class="line">  # (关闭请设置为false)</span><br><span class="line">  enable: false</span><br><span class="line">  url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line"></span><br><span class="line"># 网易云音乐插件</span><br><span class="line">music:</span><br><span class="line">  enable: false</span><br><span class="line">  # 播放器尺寸类型(1：小尺寸、2：大尺寸)</span><br><span class="line">  type: 1</span><br><span class="line">  id: 496869422 # 网易云分享的音乐ID(更换音乐请更改此配置项)</span><br><span class="line">  autoPlay: true # 是否开启自动播放</span><br><span class="line"></span><br><span class="line"># 访问量统计(不蒜子)</span><br><span class="line">busuanzi:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line"># 友盟cnzz统计(url填js代码src链接)</span><br><span class="line">cnzz:</span><br><span class="line">  enable: true</span><br><span class="line">  url: #</span><br><span class="line"></span><br><span class="line"># Google Analytics</span><br><span class="line">google_analytics: &quot;&quot;</span><br><span class="line"># 百度统计</span><br><span class="line">baidu_analytics: &quot;&quot;</span><br><span class="line"></span><br><span class="line"># Mathjax数学公式</span><br><span class="line">mathjax: true</span><br><span class="line"></span><br><span class="line"># Katex数学公式(allpost设置为false时只有头部设置math:true的文章才开启)</span><br><span class="line"># 需要更换hexo渲染器，npm un hexo-renderer-marked -S &amp;&amp; npm i hexo-renderer-markdown-it-katex -S</span><br><span class="line">katex:</span><br><span class="line">  enable: false # true</span><br><span class="line">  allpost: true</span><br><span class="line">  copy_tex: false</span><br><span class="line"></span><br><span class="line"># mermaid流程图 三个选项缺一不可(https://mermaid-js.github.io/mermaid/#/)</span><br><span class="line">mermaid:</span><br><span class="line">  enable: false</span><br><span class="line">  cdn: https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js</span><br><span class="line">  theme: forest</span><br><span class="line"></span><br><span class="line"># 网站成立年份(默认为 2023，若填入年份小于当前年份，则显示为 2018-2023 类似的格式)</span><br><span class="line">since: 2023</span><br><span class="line"></span><br><span class="line"># ICP备案信息尾部显示</span><br><span class="line">icp:</span><br><span class="line">  enable: false</span><br><span class="line">  url: &quot;http://www.beian.miit.gov.cn/&quot; # 备案链接</span><br><span class="line">  text: &quot;浙ICP备88888888&quot; # 备案信息</span><br><span class="line"># 公安备案信息尾部显示</span><br><span class="line">gongan:</span><br><span class="line">  enable: true</span><br><span class="line">  img: /images/beian.png #公安备案图片</span><br><span class="line">  url: &quot;http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123&quot; #公安备案链接</span><br><span class="line">  text: &quot;浙公网安备01234567890123号&quot; #公安备案信息</span><br><span class="line"></span><br><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br><span class="line">  GitHub:</span><br><span class="line">    url: https://github.com/Shen-Yu</span><br><span class="line">    img: https://i.loli.net/2020/09/07/indb4PRYDA98EkN.png</span><br><span class="line">  码云:</span><br><span class="line">    url: https://gitee.com/shen-yu</span><br><span class="line">    img: https://i.loli.net/2020/09/07/K3AqO7h6krQFlRX.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: https://i.loli.net/2020/09/07/UYGzjo7h68CRWny.png</span><br><span class="line">  Hexo图表插件:</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-tag-chart</span><br><span class="line">    img: https://i.loli.net/2020/09/07/GIXBYE5SoylhR1r.png</span><br><span class="line"></span><br><span class="line"># 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo; 4.MiniValine</span><br><span class="line"></span><br><span class="line"># 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)</span><br><span class="line"># 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可</span><br><span class="line">leancloud:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id: #</span><br><span class="line">  app_key: #</span><br><span class="line"># Valine配置</span><br><span class="line">valine:</span><br><span class="line">  enable: true # 是否启用</span><br><span class="line">  avatar: monsterid # 头像样式(https://valine.js.org/avatar.html)</span><br><span class="line">  placeholder: 给我的文章加点评论吧~ # placeholder</span><br><span class="line"></span><br><span class="line"># 2、Gitalk(https://github.com/gitalk/gitalk)</span><br><span class="line">gitalk:</span><br><span class="line">  enable: false # true</span><br><span class="line">  clientID: # GitHub Application Client ID</span><br><span class="line">  clientSecret: # Client Secret</span><br><span class="line">  repo: # Repository name</span><br><span class="line">  owner: # GitHub ID</span><br><span class="line">  admin: # GitHub ID</span><br><span class="line"></span><br><span class="line"># 3、Twikoo(https://github.com/imaegoo/twikoo)</span><br><span class="line">twikoo:</span><br><span class="line">  enable: false</span><br><span class="line">  envId: #</span><br><span class="line"></span><br><span class="line"># 4、MiniValine</span><br><span class="line"># See: https://github.com/MiniValine/MiniValine</span><br><span class="line">minivaline:</span><br><span class="line">  enable: false</span><br><span class="line">  serverURL: https://minivaline.your-domain.com</span><br><span class="line"></span><br><span class="line"># 首页广告配置</span><br><span class="line"># 可以根据需要自行增加ad_3，ad_4...，留空则不显示</span><br><span class="line">ads:</span><br><span class="line"># ad_1:</span><br><span class="line">#    title: vultr优惠vps</span><br><span class="line">#    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/vultr.png</span><br><span class="line">#    url: https://www.vultr.com/?ref=8630075</span><br><span class="line">#    width: </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 网站开启加密访问，密码可设置任何字符</span><br><span class="line">lock:</span><br><span class="line">  enable: false</span><br><span class="line">  password: 123456</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-关于插件"><a href="#3-关于插件" class="headerlink" title="3.关于插件"></a>3.关于插件</h2><ul>
+<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索（必需）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo cnpm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是 ayer 目录下的）:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line"> path: search.xml</span><br><span class="line"> field: post</span><br><span class="line"> format: html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅（必需）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo cnpm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后同样将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是 ayer 目录下的）:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md">hexo-helper-live2d</a> 看板娘（可选）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo cnpm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>下载模型</p>
+<p>有以下这些模型。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">live2d-widget-model-chitose</span><br><span class="line">live2d-widget-model-epsilon2_1</span><br><span class="line">live2d-widget-model-gf</span><br><span class="line">live2d-widget-model-haru/<span class="number">01</span> (use npm install <span class="attr">--save</span> live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haru/<span class="number">02</span> (use npm install <span class="attr">--save</span> live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haruto</span><br><span class="line">live2d-widget-model-hibiki</span><br><span class="line">live2d-widget-model-hijiki</span><br><span class="line">live2d-widget-model-izumi</span><br><span class="line">live2d-widget-model-koharu</span><br><span class="line">live2d-widget-model-miku</span><br><span class="line">live2d-widget-model-ni-j</span><br><span class="line">live2d-widget-model-nico</span><br><span class="line">live2d-widget-model-nietzsche</span><br><span class="line">live2d-widget-model-nipsilon</span><br><span class="line">live2d-widget-model-nito</span><br><span class="line">live2d-widget-model-shizuku</span><br><span class="line">live2d-widget-model-tororo</span><br><span class="line">live2d-widget-model-tsumiki</span><br><span class="line">live2d-widget-model-unitychan</span><br><span class="line">live2d-widget-model-wanko</span><br><span class="line">live2d-widget-model-z16</span><br></pre></td></tr></table></figure>
+
+<p>选择好对应的模型，使用 <code>cnpm install 模型的包名</code> 来安装，比如我选择的的是&#96;live2d-widget-model-miku 模型包.</p>
+<p><img src="https://pic.imgdb.cn/item/649660611ddac507cc054590.webp"></p>
+<p>在hexo博客根目录选择<code>cmd</code>命令窗口或者<code>git bash</code> 输入以下代码:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#仅为示例，将live2d-widget-model-miku改为你想要的模型包名。</span></span><br><span class="line">sudo cnpm install live2d-widget-model-miku</span><br></pre></td></tr></table></figure>
+
+<p>打开个人Hexo博客文件根目录下的 <code>_config.yml</code> 文件，在最后添加一下代码，示例:</p>
+<p>其他你配置你照抄即可，注意 model 中的 use 要改成你所安装的模型包名</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># live2d</span><br><span class="line"># https://github.com/EYHN/hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  enable: true # 是否启用看板娘</span><br><span class="line">  scriptFrom: local # 默认</span><br><span class="line">  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)，自动生成</span><br><span class="line">  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets/ # 模型文件相对与插件根目录路径</span><br><span class="line">  # scriptFrom: jsdelivr    # jsdelivr CDN</span><br><span class="line">  # scriptFrom: unpkg    # unpkg CDN</span><br><span class="line">  # scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js    # 你的自定义 url</span><br><span class="line">  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中，具体见项目github描述</span><br><span class="line">  debug: false # 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-miku # live2d模型的名字，要改的地方</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    width: 200</span><br><span class="line">    height: 400</span><br><span class="line">    position: right # 左侧还是右侧</span><br><span class="line">    hOffset: 20</span><br><span class="line">    vOffset: 0 # 距底部距离</span><br><span class="line">  mobile:</span><br><span class="line">    show: false # 手机端是否可见</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置页面"><a href="#配置页面" class="headerlink" title="配置页面"></a>配置页面</h2><ul>
+<li><strong>分类</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;categories&#x2F;index.md 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>标签</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;categories&#x2F;index.md 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>友情链接</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo hexo new page friends</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;friends&#x2F;index.md 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: friends</span><br><span class="line">type: friends</span><br><span class="line">layout: &quot;friends&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>然后在根目录下的 <code>_config.ayer.yml</code> 中自定义 <code>friends_link</code> 配置项即可</p>
+<ul>
+<li>相册</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo exo new page photos</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;photos&#x2F;index.md 文件，<code>img_url</code> 替换成图片路径，<code>caption</code> 替换成图片名称</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Gallery</span><br><span class="line"></span><br><span class="line">albums: [[&quot;img_url&quot;, &quot;img_caption&quot;], [&quot;img_url&quot;, &quot;img_caption&quot;]]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h1 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h1><p>我们辛辛苦苦写了博客是为了什么，但不管是为了什么，都有一个让更多人看见的过程。（那些写完就自己一个人看的除外）所以我们需要seo优化，让各大搜索引擎收录我们的网站。</p>
+<h3 id="1-生成-sitemap-文件"><a href="#1-生成-sitemap-文件" class="headerlink" title="1. 生成 sitemap 文件"></a>1. 生成 sitemap 文件</h3><p>需要先安装 hexo 插件：</p>
+<pre><code>     sudo cnpm install hexo-generator-baidu-sitemap --save
+</code></pre>
+<p>打开配置文件博客根目录下的<code>_config.yml</code>添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">	path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>再重启 hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo hexo clean &amp;&amp; sudo hexo g &amp;&amp; sudo hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-网站推送至百度"><a href="#2-网站推送至百度" class="headerlink" title="2.网站推送至百度"></a>2.网站推送至百度</h3><p>百度 → <a href="https://ziyuan.baidu.com/site/siteadd?siteurl=">添加个人网站</a></p>
+<p>使用添加文件的方式</p>
+<p>输入你的网址</p>
+<p><img src="https://pic.imgdb.cn/item/64966b321ddac507cc16c7f3.webp"></p>
+<p>按你的情况选</p>
+<p><img src="https://pic.imgdb.cn/item/64966b481ddac507cc16ecba.webp"></p>
+<p>选择文件验证</p>
+<p><img src="https://pic.imgdb.cn/item/64966b571ddac507cc170728.webp"></p>
+<p>把那个验证文件下载到你博客的 source 文件夹里面。</p>
+<p>然后</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo hexo clean &amp;&amp; sudo hexo g &amp;&amp; sudo hexo d</span><br></pre></td></tr></table></figure>
+
+<p>点击完成验证即可。</p>
+<h2 id="3-将内容推送至百度"><a href="#3-将内容推送至百度" class="headerlink" title="3.将内容推送至百度"></a>3.将内容推送至百度</h2><h3 id="一-手动提交baidusitemap-xml"><a href="#一-手动提交baidusitemap-xml" class="headerlink" title="一.手动提交baidusitemap.xml"></a>一.<a href="https://ziyuan.baidu.com/linksubmit/index">手动提交baidusitemap.xml</a></h3><p><img src="https://pic.imgdb.cn/item/64966d361ddac507cc1a845b.webp"></p>
+<p>点击sitemap</p>
+<p><img src="https://pic.imgdb.cn/item/64966d691ddac507cc1adc96.webp"></p>
+<p>填入http:&#x2F;&#x2F;你的网址&#x2F;baidusitemap.xml 提交即可</p>
+<h3 id="二-”抓取诊断”，手动-百度抓取"><a href="#二-”抓取诊断”，手动-百度抓取" class="headerlink" title="二.”抓取诊断”，手动-百度抓取"></a>二.”抓取诊断”，手动-百度抓取</h3><h3 id="三-Robots-→-检测并更新"><a href="#三-Robots-→-检测并更新" class="headerlink" title="三.Robots → 检测并更新"></a>三.Robots → 检测并更新</h3><p><img src="https://pic.imgdb.cn/item/64966d581ddac507cc1ac360.webp"></p>
+<p>robots配置</p>
+<p>在你博客(hexo)根目录下的 source 文件夹中新建一个robots文件，填入一下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/</span><br><span class="line">Allow: /about/</span><br><span class="line">Allow: /photos</span><br><span class="line"></span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /js/</span><br><span class="line">Disallow: /css/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line">Sitemap: https://你的网址/sitemap.xml</span><br><span class="line">Sitemap: https://你的网址/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>最后</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo hexo clean &amp;&amp; sudo hexo g &amp;&amp; sudo hexo d</span><br></pre></td></tr></table></figure>
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这样下来你的Hexo博客就基本成型了，预祝你的博客越办越好！</p>
+<p>ps.坐在电脑前一个上午，屁股好痛…</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>Ayer</tag>
+        <tag>hexo</tag>
+        <tag>live2d</tag>
+        <tag>seo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于Hexo的图片插入问题</title>
+    <url>/20230624/%E5%85%B3%E4%BA%8EHexo%E7%9A%84%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="本地图片引用了却无法显示"><a href="#本地图片引用了却无法显示" class="headerlink" title="本地图片引用了却无法显示"></a>本地图片引用了却无法显示</h1><blockquote>
+<p>插入图片的两种方法：</p>
+</blockquote>
+<ol>
+<li>引用图床</li>
+<li>引用本地图片。为了防止路径出错，建议使用图床。</li>
+</ol>
+<span id="more"></span>
+
+<h2 id="1-图床"><a href="#1-图床" class="headerlink" title="1.图床"></a>1.图床</h2><p>推荐使用：<a href="https://www.superbed.cn/">聚合图床</a></p>
+<h2 id="2-本地图片"><a href="#2-本地图片" class="headerlink" title="2.本地图片"></a>2.本地图片</h2><p>参照 <a href="https://hexo.io/zh-cn/docs/asset-folders">Hexo 文档</a>，然后用这种方式引用图片：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img image.jpg [title] %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果还是无法显示，请尝试在文章里用 html 的 img 标签来引用本地图片。</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>折腾一下解析域名</title>
     <url>/20230623/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天折腾完Hexo和Ayer主题，把网站托管到GitHub之后就开始忙活着搞域名了。</p>
 <p>之前也不是没搞过，可能是由于白嫖的原因，问题不断，屡屡失败，就是没解析上。而今天秉着花钱买服务的想法，遂花2.22美金，买下了这个域名<code>misakait.online</code>的一年使用期。最后它也没辜负我的期望，成功解析上了。</p>
-<h1 id="正式教程"><a href="#正式教程" class="headerlink" title="正式教程"></a>正式教程</h1><span id="more"></span>
+<span id="more"></span>
 
-<h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>我是在<a href="%5Bwww.name.com%5D(http://www.name.com)">Name</a>这里买的域名，购买过程就不啰嗦了，就是注意买的时候会有个人信息要填，国家要选China,币种人民币即可。要不没有支付宝选项。</p>
+<h1 id="正式教程"><a href="#正式教程" class="headerlink" title="正式教程"></a>正式教程</h1><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>我是在<a href="%5Bwww.name.com%5D(http://www.name.com)">Name</a>这里买的域名，购买过程就不啰嗦了，就是注意买的时候会有个人信息要填，国家要选China,币种人民币即可。要不没有支付宝选项。</p>
 <h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><p><img src="https://pic.imgdb.cn/item/64958a961ddac507ccfa7a1f.webp"></p>
 <p>这样子填就可以了，其中主机类型A的填@，answer这样填：</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure>
@@ -45,8 +203,8 @@
         <category>technology</category>
       </categories>
       <tags>
-        <tag>domain</tag>
         <tag>hexo</tag>
+        <tag>domain</tag>
       </tags>
   </entry>
   <entry>

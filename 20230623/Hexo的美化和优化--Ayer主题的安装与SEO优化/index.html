@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Hexo的美化和优化--Ayer主题的安装与SEO优化 |  Misakait&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Misakait's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Hexo的美化和优化--Ayer主题的安装与SEO优化"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Hexo的美化和优化--Ayer主题的安装与SEO优化
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/20230623/Hexo%E7%9A%84%E7%BE%8E%E5%8C%96%E5%92%8C%E4%BC%98%E5%8C%96--Ayer%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8ESEO%E4%BC%98%E5%8C%96/" class="article-date">
+  <time datetime="2023-06-23T13:45:35.000Z" itemprop="datePublished">2023-06-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">3.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">13 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>正想要写这篇博客时。打开朋友圈一看，又是狗粮又是现充在这端午三天横行。反观自己，这三天就全坐在电脑旁折腾树莓派和博客了。不说了题外话了，回归正题。本篇博文力图包含Ayer主题的安装，live2d看板娘的安装，SEO的优化。</p>
+<span id="more"></span>
+
+<h1 id="部署Ayer主题"><a href="#部署Ayer主题" class="headerlink" title="部署Ayer主题"></a>部署Ayer主题</h1><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><p><strong>方法一( 推荐）：</strong></p>
+<p>在你的博客（Hexo）目录下执行以下命令：</p>
+<p>如若没有安装cnpm则以下所有cnpm命令全部改为npm即可，或者参考我的这篇博文<a href="https://misakait.online/20230623/%E8%AE%B0%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8AHexo%E7%9A%84%E6%90%AD%E5%BB%BA/">记树莓派上Hexo的搭建 | Misakait’s Blog</a> 来安装cnpm。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i hexo-theme-ayer -S</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果是新安装本主题，安装完成后会在根目录生成一个<code>_config.ayer.yml</code>文件，如若没有新建一个<code>_config.ayer.yml文件。直接编辑</code>_conig.ayer.yml&#96;文件进行配置即可。</li>
+</ul>
+<p><strong>方法二（hexo &lt; 5.0）：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 国内用户如果速度较慢，可以把github地址替换为：https://gitee.com/mirrors/ayer.git</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h2><p>将博客根目录下的 <code>_config.yml</code> 里的 <code>theme</code> 值修改成 <code>ayer</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: ayer</span><br></pre></td></tr></table></figure>
+
+<p>进入_config.ayer.yml文件配置，如果你一开始没有改文件，而是自己新建的，将下文复制过去。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br></pre></td><td class="code"><pre><span class="line"># 侧边栏菜单</span><br><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  归档: /archives</span><br><span class="line">  分类: /categories</span><br><span class="line">  标签: /tags</span><br><span class="line">  关于我: /about</span><br><span class="line"></span><br><span class="line"># 站点次标题和打字动效</span><br><span class="line"># https://github.com/mattboldt/typed.js</span><br><span class="line">subtitle:</span><br><span class="line">  enable: true # 是否开启动效</span><br><span class="line">  text: 唯我超电磁炮永存 # 显示的文字</span><br><span class="line">  text2: 樱花落下的速度是没秒五厘米 # 滚动播放，如果不需要可以留空</span><br><span class="line">  text3: 在此宣誓对你的爱 # 最多支持三段文字</span><br><span class="line">  startDelay: 0 # 延迟时间</span><br><span class="line">  typeSpeed: 200 # 打字速度</span><br><span class="line">  loop: true # 是否循环</span><br><span class="line">  backSpeed: 100 # 回退速度</span><br><span class="line">  showCursor: true # 是否显示光标</span><br><span class="line"></span><br><span class="line"># 网站图标和侧边栏logo</span><br><span class="line">favicon: /favicon.ico</span><br><span class="line">logo: /images/ayer-side.svg</span><br><span class="line"></span><br><span class="line"># 封面配置</span><br><span class="line"># enable-是否启用封面；path-封面背景图；logo-封面logo</span><br><span class="line">cover:</span><br><span class="line">  enable: true</span><br><span class="line">  path: /images/cover1.jpg # /source/images目录下附送多张精美壁纸，可任意更换</span><br><span class="line">  logo: /images/ayer.svg # 如果不要直接设置成false</span><br><span class="line"></span><br><span class="line"># 页面顶部进度条</span><br><span class="line">progressBar: true</span><br><span class="line"></span><br><span class="line"># 告示板模块</span><br><span class="line">broadcast:</span><br><span class="line">  enable: true # true开启，false关闭</span><br><span class="line">  type: 2 # 1：自定义输入，2：一言api(https://hitokoto.cn/)</span><br><span class="line">  text: 一个安静优雅的hexo主题，快速且响应式。 # type为1时有效</span><br><span class="line"></span><br><span class="line"># 文章配置</span><br><span class="line"># 文章太长，截断按钮文字(在需要截断的行增加此标记：&lt;!--more--&gt;)</span><br><span class="line">excerpt_link: 阅读更多...</span><br><span class="line"># 如果你嫌每篇文章手动加more标记比较麻烦，又不想在首页全文显示，可以把excerpt_all设置成true，这样首页只会显示文章归档</span><br><span class="line">excerpt_all: false</span><br><span class="line"></span><br><span class="line"># 是否开启代码复制按钮</span><br><span class="line">copy_btn: true</span><br><span class="line"># 是否开启文章分享按钮</span><br><span class="line">share_enable: true</span><br><span class="line"># 国内的社交平台(If you are not in China, maybe you prefer to set:false)</span><br><span class="line">share_china: true</span><br><span class="line"># 文章分享文字</span><br><span class="line">share_text: 分享</span><br><span class="line"></span><br><span class="line"># 分页文字</span><br><span class="line">nav_text:</span><br><span class="line">  page_prev: 上一页</span><br><span class="line">  page_next: 下一页</span><br><span class="line">  post_prev: 上一篇</span><br><span class="line">  post_next: 下一篇</span><br><span class="line"></span><br><span class="line"># 文章页是否显示目录</span><br><span class="line">toc: true</span><br><span class="line"></span><br><span class="line"># 文章中的图片是否支持点击放大</span><br><span class="line">image_viewer: true</span><br><span class="line"></span><br><span class="line"># https://github.com/willin/hexo-wordcount</span><br><span class="line"># 是否开启字数统计(关闭请设置enable为false)</span><br><span class="line"># 也可以单独在md文件里Front-matter设置`no_word_count: true`属性，来自定义关闭字数统计</span><br><span class="line">word_count:</span><br><span class="line">  enable: true</span><br><span class="line">  # 只在文章详情显示(不在首页显示)</span><br><span class="line">  only_article_visit: true</span><br><span class="line"></span><br><span class="line"># 打赏</span><br><span class="line"># 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-默认开启所有文章均有打赏，如果有些文章你不需要，请在文章对应的md文件里设置no_reward:true</span><br><span class="line">reward_type: 0</span><br><span class="line"># 打赏wording</span><br><span class="line">#reward_wording: &quot;请我喝杯咖啡吧~&quot;</span><br><span class="line"># 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg</span><br><span class="line">#alipay: /images/alipay.jpg</span><br><span class="line"># 微信二维码图片地址</span><br><span class="line">#weixin: /images/wechat.jpg</span><br><span class="line"></span><br><span class="line"># 版权声明</span><br><span class="line"># 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明</span><br><span class="line">copyright_type: 2</span><br><span class="line"></span><br><span class="line"># 是否启用搜索</span><br><span class="line">search: true</span><br><span class="line"></span><br><span class="line"># RSS订阅(先安装hexo-generator-feed插件，再去博客根目录config进行配置)</span><br><span class="line"># 不想显示可以直接留空</span><br><span class="line">rss: /atom.xml</span><br><span class="line"></span><br><span class="line"># 是否启用黑夜模式开关</span><br><span class="line">darkmode: true</span><br><span class="line"></span><br><span class="line"># 动态背景效果: 0-关闭，1-动态线条(跟随鼠标)</span><br><span class="line">canvas_bg: 1</span><br><span class="line"></span><br><span class="line"># 自定义鼠标样式，直接替换/images/mouse.cur文件</span><br><span class="line">mouse:</span><br><span class="line">  enable: false</span><br><span class="line">  path: /images/mouse.cur</span><br><span class="line"></span><br><span class="line"># 鼠标点击效果：0-关闭，1-爱心，2-爆炸烟花，3-粒子烟花</span><br><span class="line">click_effect: 1</span><br><span class="line"></span><br><span class="line"># 页面宽度自定义（不建议修改，可能造成布局混乱），article_width文章宽度，sidebar_width侧边栏宽度</span><br><span class="line">layout:</span><br><span class="line">  article_width: 80rem</span><br><span class="line">  sidebar_width: 8rem</span><br><span class="line"></span><br><span class="line"># GitHub Ribbons-封面右上角的forkme，换样式直接在source/images目录下替换forkme图片</span><br><span class="line">github:</span><br><span class="line">  # (关闭请设置为false)</span><br><span class="line">  enable: false</span><br><span class="line">  url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line"></span><br><span class="line"># 网易云音乐插件</span><br><span class="line">music:</span><br><span class="line">  enable: false</span><br><span class="line">  # 播放器尺寸类型(1：小尺寸、2：大尺寸)</span><br><span class="line">  type: 1</span><br><span class="line">  id: 496869422 # 网易云分享的音乐ID(更换音乐请更改此配置项)</span><br><span class="line">  autoPlay: true # 是否开启自动播放</span><br><span class="line"></span><br><span class="line"># 访问量统计(不蒜子)</span><br><span class="line">busuanzi:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line"># 友盟cnzz统计(url填js代码src链接)</span><br><span class="line">cnzz:</span><br><span class="line">  enable: true</span><br><span class="line">  url: #</span><br><span class="line"></span><br><span class="line"># Google Analytics</span><br><span class="line">google_analytics: &quot;&quot;</span><br><span class="line"># 百度统计</span><br><span class="line">baidu_analytics: &quot;&quot;</span><br><span class="line"></span><br><span class="line"># Mathjax数学公式</span><br><span class="line">mathjax: true</span><br><span class="line"></span><br><span class="line"># Katex数学公式(allpost设置为false时只有头部设置math:true的文章才开启)</span><br><span class="line"># 需要更换hexo渲染器，npm un hexo-renderer-marked -S &amp;&amp; npm i hexo-renderer-markdown-it-katex -S</span><br><span class="line">katex:</span><br><span class="line">  enable: false # true</span><br><span class="line">  allpost: true</span><br><span class="line">  copy_tex: false</span><br><span class="line"></span><br><span class="line"># mermaid流程图 三个选项缺一不可(https://mermaid-js.github.io/mermaid/#/)</span><br><span class="line">mermaid:</span><br><span class="line">  enable: false</span><br><span class="line">  cdn: https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js</span><br><span class="line">  theme: forest</span><br><span class="line"></span><br><span class="line"># 网站成立年份(默认为 2023，若填入年份小于当前年份，则显示为 2018-2023 类似的格式)</span><br><span class="line">since: 2023</span><br><span class="line"></span><br><span class="line"># ICP备案信息尾部显示</span><br><span class="line">icp:</span><br><span class="line">  enable: false</span><br><span class="line">  url: &quot;http://www.beian.miit.gov.cn/&quot; # 备案链接</span><br><span class="line">  text: &quot;浙ICP备88888888&quot; # 备案信息</span><br><span class="line"># 公安备案信息尾部显示</span><br><span class="line">gongan:</span><br><span class="line">  enable: true</span><br><span class="line">  img: /images/beian.png #公安备案图片</span><br><span class="line">  url: &quot;http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123&quot; #公安备案链接</span><br><span class="line">  text: &quot;浙公网安备01234567890123号&quot; #公安备案信息</span><br><span class="line"></span><br><span class="line"># 友情链接</span><br><span class="line">friends_link:</span><br><span class="line">  Ayer主题: #网站名称</span><br><span class="line">    #网站地址</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-theme-ayer</span><br><span class="line">    #网站图片(可忽略不写)</span><br><span class="line">    img: /images/ayer.png</span><br><span class="line">  GitHub:</span><br><span class="line">    url: https://github.com/Shen-Yu</span><br><span class="line">    img: https://i.loli.net/2020/09/07/indb4PRYDA98EkN.png</span><br><span class="line">  码云:</span><br><span class="line">    url: https://gitee.com/shen-yu</span><br><span class="line">    img: https://i.loli.net/2020/09/07/K3AqO7h6krQFlRX.png</span><br><span class="line">  Hexo官网:</span><br><span class="line">    url: https://hexo.io</span><br><span class="line">    img: https://i.loli.net/2020/09/07/UYGzjo7h68CRWny.png</span><br><span class="line">  Hexo图表插件:</span><br><span class="line">    url: https://github.com/Shen-Yu/hexo-tag-chart</span><br><span class="line">    img: https://i.loli.net/2020/09/07/GIXBYE5SoylhR1r.png</span><br><span class="line"></span><br><span class="line"># 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo; 4.MiniValine</span><br><span class="line"></span><br><span class="line"># 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)</span><br><span class="line"># 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可</span><br><span class="line">leancloud:</span><br><span class="line">  enable: true</span><br><span class="line">  app_id: #</span><br><span class="line">  app_key: #</span><br><span class="line"># Valine配置</span><br><span class="line">valine:</span><br><span class="line">  enable: true # 是否启用</span><br><span class="line">  avatar: monsterid # 头像样式(https://valine.js.org/avatar.html)</span><br><span class="line">  placeholder: 给我的文章加点评论吧~ # placeholder</span><br><span class="line"></span><br><span class="line"># 2、Gitalk(https://github.com/gitalk/gitalk)</span><br><span class="line">gitalk:</span><br><span class="line">  enable: false # true</span><br><span class="line">  clientID: # GitHub Application Client ID</span><br><span class="line">  clientSecret: # Client Secret</span><br><span class="line">  repo: # Repository name</span><br><span class="line">  owner: # GitHub ID</span><br><span class="line">  admin: # GitHub ID</span><br><span class="line"></span><br><span class="line"># 3、Twikoo(https://github.com/imaegoo/twikoo)</span><br><span class="line">twikoo:</span><br><span class="line">  enable: false</span><br><span class="line">  envId: #</span><br><span class="line"></span><br><span class="line"># 4、MiniValine</span><br><span class="line"># See: https://github.com/MiniValine/MiniValine</span><br><span class="line">minivaline:</span><br><span class="line">  enable: false</span><br><span class="line">  serverURL: https://minivaline.your-domain.com</span><br><span class="line"></span><br><span class="line"># 首页广告配置</span><br><span class="line"># 可以根据需要自行增加ad_3，ad_4...，留空则不显示</span><br><span class="line">ads:</span><br><span class="line"># ad_1:</span><br><span class="line">#    title: vultr优惠vps</span><br><span class="line">#    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/vultr.png</span><br><span class="line">#    url: https://www.vultr.com/?ref=8630075</span><br><span class="line">#    width: </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 网站开启加密访问，密码可设置任何字符</span><br><span class="line">lock:</span><br><span class="line">  enable: false</span><br><span class="line">  password: 123456</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-关于插件"><a href="#3-关于插件" class="headerlink" title="3.关于插件"></a>3.关于插件</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索（必需）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cnpm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是 ayer 目录下的）:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line"> path: search.xml</span><br><span class="line"> field: post</span><br><span class="line"> format: html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅（必需）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cnpm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后同样将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是 ayer 目录下的）:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md">hexo-helper-live2d</a> 看板娘（可选）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cnpm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>下载模型</p>
+<p>有以下这些模型。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">live2d-widget-model-chitose</span><br><span class="line">live2d-widget-model-epsilon2_1</span><br><span class="line">live2d-widget-model-gf</span><br><span class="line">live2d-widget-model-haru/<span class="number">01</span> (use npm install <span class="attr">--save</span> live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haru/<span class="number">02</span> (use npm install <span class="attr">--save</span> live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haruto</span><br><span class="line">live2d-widget-model-hibiki</span><br><span class="line">live2d-widget-model-hijiki</span><br><span class="line">live2d-widget-model-izumi</span><br><span class="line">live2d-widget-model-koharu</span><br><span class="line">live2d-widget-model-miku</span><br><span class="line">live2d-widget-model-ni-j</span><br><span class="line">live2d-widget-model-nico</span><br><span class="line">live2d-widget-model-nietzsche</span><br><span class="line">live2d-widget-model-nipsilon</span><br><span class="line">live2d-widget-model-nito</span><br><span class="line">live2d-widget-model-shizuku</span><br><span class="line">live2d-widget-model-tororo</span><br><span class="line">live2d-widget-model-tsumiki</span><br><span class="line">live2d-widget-model-unitychan</span><br><span class="line">live2d-widget-model-wanko</span><br><span class="line">live2d-widget-model-z16</span><br></pre></td></tr></table></figure>
+
+<p>选择好对应的模型，使用 <code>cnpm install 模型的包名</code> 来安装，比如我选择的的是&#96;live2d-widget-model-miku 模型包.</p>
+<p><img src="https://pic.imgdb.cn/item/649660611ddac507cc054590.webp"></p>
+<p>在hexo博客根目录选择<code>cmd</code>命令窗口或者<code>git bash</code> 输入以下代码:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#仅为示例，将live2d-widget-model-miku改为你想要的模型包名。</span></span><br><span class="line">sudo cnpm install live2d-widget-model-miku</span><br></pre></td></tr></table></figure>
+
+<p>打开个人Hexo博客文件根目录下的 <code>_config.yml</code> 文件，在最后添加一下代码，示例:</p>
+<p>其他你配置你照抄即可，注意 model 中的 use 要改成你所安装的模型包名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># live2d</span><br><span class="line"># https://github.com/EYHN/hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  enable: true # 是否启用看板娘</span><br><span class="line">  scriptFrom: local # 默认</span><br><span class="line">  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)，自动生成</span><br><span class="line">  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets/ # 模型文件相对与插件根目录路径</span><br><span class="line">  # scriptFrom: jsdelivr    # jsdelivr CDN</span><br><span class="line">  # scriptFrom: unpkg    # unpkg CDN</span><br><span class="line">  # scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js    # 你的自定义 url</span><br><span class="line">  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中，具体见项目github描述</span><br><span class="line">  debug: false # 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-miku # live2d模型的名字，要改的地方</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    width: 200</span><br><span class="line">    height: 400</span><br><span class="line">    position: right # 左侧还是右侧</span><br><span class="line">    hOffset: 20</span><br><span class="line">    vOffset: 0 # 距底部距离</span><br><span class="line">  mobile:</span><br><span class="line">    show: false # 手机端是否可见</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置页面"><a href="#配置页面" class="headerlink" title="配置页面"></a>配置页面</h2><ul>
+<li><strong>分类</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;categories&#x2F;index.md 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>标签</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;categories&#x2F;index.md 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>友情链接</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo new page friends</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;friends&#x2F;index.md 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: friends</span><br><span class="line">type: friends</span><br><span class="line">layout: &quot;friends&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>然后在根目录下的 <code>_config.ayer.yml</code> 中自定义 <code>friends_link</code> 配置项即可</p>
+<ul>
+<li>相册</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo exo new page photos</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;photos&#x2F;index.md 文件，<code>img_url</code> 替换成图片路径，<code>caption</code> 替换成图片名称</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Gallery</span><br><span class="line"></span><br><span class="line">albums: [[&quot;img_url&quot;, &quot;img_caption&quot;], [&quot;img_url&quot;, &quot;img_caption&quot;]]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h1 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h1><p>我们辛辛苦苦写了博客是为了什么，但不管是为了什么，都有一个让更多人看见的过程。（那些写完就自己一个人看的除外）所以我们需要seo优化，让各大搜索引擎收录我们的网站。</p>
+<h3 id="1-生成-sitemap-文件"><a href="#1-生成-sitemap-文件" class="headerlink" title="1. 生成 sitemap 文件"></a>1. 生成 sitemap 文件</h3><p>需要先安装 hexo 插件：</p>
+<pre><code>     sudo cnpm install hexo-generator-baidu-sitemap --save
+</code></pre>
+<p>打开配置文件博客根目录下的<code>_config.yml</code>添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">	path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>再重启 hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo clean &amp;&amp; sudo hexo g &amp;&amp; sudo hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-网站推送至百度"><a href="#2-网站推送至百度" class="headerlink" title="2.网站推送至百度"></a>2.网站推送至百度</h3><p>百度 → <a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/site/siteadd?siteurl=">添加个人网站</a></p>
+<p>使用添加文件的方式</p>
+<p>输入你的网址</p>
+<p><img src="https://pic.imgdb.cn/item/64966b321ddac507cc16c7f3.webp"></p>
+<p>按你的情况选</p>
+<p><img src="https://pic.imgdb.cn/item/64966b481ddac507cc16ecba.webp"></p>
+<p>选择文件验证</p>
+<p><img src="https://pic.imgdb.cn/item/64966b571ddac507cc170728.webp"></p>
+<p>把那个验证文件下载到你博客的 source 文件夹里面。</p>
+<p>然后</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo clean &amp;&amp; sudo hexo g &amp;&amp; sudo hexo d</span><br></pre></td></tr></table></figure>
+
+<p>点击完成验证即可。</p>
+<h2 id="3-将内容推送至百度"><a href="#3-将内容推送至百度" class="headerlink" title="3.将内容推送至百度"></a>3.将内容推送至百度</h2><h3 id="一-手动提交baidusitemap-xml"><a href="#一-手动提交baidusitemap-xml" class="headerlink" title="一.手动提交baidusitemap.xml"></a>一.<a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/linksubmit/index">手动提交baidusitemap.xml</a></h3><p><img src="https://pic.imgdb.cn/item/64966d361ddac507cc1a845b.webp"></p>
+<p>点击sitemap</p>
+<p><img src="https://pic.imgdb.cn/item/64966d691ddac507cc1adc96.webp"></p>
+<p>填入http:&#x2F;&#x2F;你的网址&#x2F;baidusitemap.xml 提交即可</p>
+<h3 id="二-”抓取诊断”，手动-百度抓取"><a href="#二-”抓取诊断”，手动-百度抓取" class="headerlink" title="二.”抓取诊断”，手动-百度抓取"></a>二.”抓取诊断”，手动-百度抓取</h3><h3 id="三-Robots-→-检测并更新"><a href="#三-Robots-→-检测并更新" class="headerlink" title="三.Robots → 检测并更新"></a>三.Robots → 检测并更新</h3><p><img src="https://pic.imgdb.cn/item/64966d581ddac507cc1ac360.webp"></p>
+<p>robots配置</p>
+<p>在你博客(hexo)根目录下的 source 文件夹中新建一个robots文件，填入一下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/</span><br><span class="line">Allow: /about/</span><br><span class="line">Allow: /photos</span><br><span class="line"></span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /js/</span><br><span class="line">Disallow: /css/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line">Sitemap: https://你的网址/sitemap.xml</span><br><span class="line">Sitemap: https://你的网址/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>最后</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo clean &amp;&amp; sudo hexo g &amp;&amp; sudo hexo d</span><br></pre></td></tr></table></figure>
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这样下来你的Hexo博客就基本成型了，预祝你的博客越办越好！</p>
+<p>ps.坐在电脑前一个上午，屁股好痛…</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://misakait.online/20230623/Hexo%E7%9A%84%E7%BE%8E%E5%8C%96%E5%92%8C%E4%BC%98%E5%8C%96--Ayer%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8ESEO%E4%BC%98%E5%8C%96/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ayer/" rel="tag">Ayer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/live2d/" rel="tag">live2d</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/seo/" rel="tag">seo</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/20230624/%E5%85%B3%E4%BA%8EHexo%E7%9A%84%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            关于Hexo的图片插入问题
+          
+        </div>
+      </a>
+    
+    
+      <a href="/20230623/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">折腾一下解析域名</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> misakait
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Misakait&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/technology/">技术</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/by-talk/">杂谈</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=496869422&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":20,"vOffset":0},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+
+</html>
