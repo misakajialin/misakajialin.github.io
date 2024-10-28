@@ -6,7 +6,7 @@
   <link href="https://misakait.online/atom.xml" rel="self"/>
   
   <link href="https://misakait.online/"/>
-  <updated>2024-08-31T02:43:22.496Z</updated>
+  <updated>2023-06-24T03:44:45.000Z</updated>
   <id>https://misakait.online/</id>
   
   <author>
@@ -17,47 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>深大转专业经验分享</title>
-    <link href="https://misakait.online/20240831/%E6%B7%B1%E5%A4%A7%E8%BD%AC%E4%B8%93%E4%B8%9A%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB(%E8%BD%AC%E8%BD%BD)/"/>
-    <id>https://misakait.online/20240831/%E6%B7%B1%E5%A4%A7%E8%BD%AC%E4%B8%93%E4%B8%9A%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB(%E8%BD%AC%E8%BD%BD)/</id>
-    <published>2024-08-31T02:42:52.826Z</published>
-    <updated>2024-08-31T02:43:22.496Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;深大转专业经验分享-转载&quot;&gt;&lt;a href=&quot;#深大转专业经验分享-转载&quot; class=&quot;headerlink&quot; title=&quot;深大转专业经验分享(转载)&quot;&gt;&lt;/a&gt;深大转专业经验分享(转载)&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>如何使用lux下载B站视频</title>
-    <link href="https://misakait.online/20240624/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8lux%E4%B8%8B%E8%BD%BDB%E7%AB%99%E8%A7%86%E9%A2%91/"/>
-    <id>https://misakait.online/20240624/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8lux%E4%B8%8B%E8%BD%BDB%E7%AB%99%E8%A7%86%E9%A2%91/</id>
-    <published>2024-06-24T14:33:49.384Z</published>
-    <updated>2024-08-24T09:19:11.158Z</updated>
-    
-    
-    <summary type="html">如何使用lux下载B站视频 前言 鉴于现在bilibili视频下载越来越难，要么要下载一个巨大杂七杂八的软件，要么就是收费，至于小而美的插件脚本都很难寻找，于是我在此推广一个开源项目lux，并介绍如何用它来实现哔哩哔哩视频的下载 more 1. 下载lux和FFmpeg 访问此处Release v0.24.1 · iawia002/lux (github.com) 选择适合你操作系统的版本，一般我...</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>关于Hexo的图片插入问题</title>
     <link href="https://misakait.online/20230624/%E5%85%B3%E4%BA%8EHexo%E7%9A%84%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/"/>
     <id>https://misakait.online/20230624/%E5%85%B3%E4%BA%8EHexo%E7%9A%84%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/</id>
     <published>2023-06-24T03:40:27.000Z</published>
-    <updated>2024-08-31T02:52:36.868Z</updated>
+    <updated>2023-06-24T03:44:45.000Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;本地图片引用了却无法显示&quot;&gt;&lt;a href=&quot;#本地图片引用了却无法显示&quot; class=&quot;headerlink&quot; title=&quot;本地图片引用了却无法显示&quot;&gt;&lt;/a&gt;本地图片引用了却无法显示&lt;/h1&gt;&lt;blockquote&gt;
@@ -82,7 +46,7 @@
     <link href="https://misakait.online/20230623/Hexo%E7%9A%84%E7%BE%8E%E5%8C%96%E5%92%8C%E4%BC%98%E5%8C%96--Ayer%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8ESEO%E4%BC%98%E5%8C%96/"/>
     <id>https://misakait.online/20230623/Hexo%E7%9A%84%E7%BE%8E%E5%8C%96%E5%92%8C%E4%BC%98%E5%8C%96--Ayer%E4%B8%BB%E9%A2%98%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8ESEO%E4%BC%98%E5%8C%96/</id>
     <published>2023-06-23T13:45:35.000Z</published>
-    <updated>2024-08-31T02:52:36.864Z</updated>
+    <updated>2023-06-24T04:20:29.000Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;正想要写这篇博客时。打开朋友圈一看，又是狗粮又是现充在这端午三天横行。反观自己，这三天就全坐在电脑旁折腾树莓派和博客了。不说了题外话了，回归正题。本篇博文力图包含Ayer主题的安装，live2d看板娘的安装，SEO的优化。&lt;/p&gt;</summary>
@@ -107,7 +71,7 @@
     <link href="https://misakait.online/20230623/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D/"/>
     <id>https://misakait.online/20230623/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D/</id>
     <published>2023-06-23T11:52:38.000Z</published>
-    <updated>2024-08-31T02:52:36.868Z</updated>
+    <updated>2023-06-23T14:37:09.000Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;今天折腾完Hexo和Ayer主题，把网站托管到GitHub之后就开始忙活着搞域名了。&lt;/p&gt;
@@ -129,7 +93,7 @@
     <link href="https://misakait.online/20230623/%E8%AE%B0%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8AHexo%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
     <id>https://misakait.online/20230623/%E8%AE%B0%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8AHexo%E7%9A%84%E6%90%AD%E5%BB%BA/</id>
     <published>2023-06-23T05:53:13.000Z</published>
-    <updated>2024-08-31T02:52:36.868Z</updated>
+    <updated>2023-06-23T07:37:56.000Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;   首先感谢你能来访问我的 Blog，这是我搭建的第一个博客网站，使用的是 Github Pages + Hexo 的形式搭建。从小白一路走了过来也挺不容易的 hhh，我奋战一天一夜，从一开始的Aurora失败最后转投Hexo，可谓经历良多。现在把它记录下来，将来也许会是一种怀念。&lt;/p&gt;</summary>
